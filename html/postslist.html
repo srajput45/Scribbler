@@ -11,7 +11,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montez&family=Ubuntu+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/postslist.css">
-    <link rel="stylesheet" href="../styles/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../styles/fontawesome/css/all.css">
 </head>
 
 <body>
@@ -112,7 +112,7 @@
         <!-- post 4 ends here -->
 
         <!-- post 5 starts here -->
-        <div class="post">
+        <div class="post" id="post5">
             <div class="userName">
                 <p>Srishti Gupta</p>
             </div>
@@ -121,7 +121,7 @@
                 <div class="postTitle">
                     <p>Everything you should know about ‘module’ & ‘require’ in Node.js</p>
                     <span class="faIcon">
-                        <i class="fa fa-trash" data-toggle="modal" data-target="#deleteModal" aria-hidden="true"></i>
+                        <i class="fa fa-trash" id="5" data-toggle="modal" data-target="#deleteModal" aria-hidden="true"></i>
                     </span>
                 </div>
                 <p>Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
@@ -144,7 +144,7 @@
                             <h6 class="form-group text-center">Are you sure you want to delete this post?</h6>
                         </div>
                         <div class="d-flex justify-content-between">
-                            <button type="button" id="deleteYes" onclick="show(true)" class="btn btn-success">Yes</button>
+                            <button type="button" onclick="show(this)" class="btn btn-success">Yes</button>
                             <button type="button" id="DeleteNo" data-dismiss="modal" class="btn btn-danger">No</button>
                         </div>
                     </form>
