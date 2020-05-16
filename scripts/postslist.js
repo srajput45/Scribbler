@@ -1,9 +1,6 @@
-function newmodal() {
-    $('#signInModal').modal('hide');
-}
-
-function show(id) {
-    var x = id;
-    console.log(x);
-    document.getElementById('post1').style.display = 'none';
+function deletePost(id) {
+    var Delete = document.getElementById("deleteYes");
+    Delete.onclick = function() {
+        document.getElementById(id).style.display = "none";
+    }
 }
