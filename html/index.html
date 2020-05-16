@@ -19,13 +19,13 @@
 <body>
     <!-- TODO: Include all your code for the header and home page here -->
     <div class="header">
-        <input class="topButtons" type="button" data-toggle="modal" data-target="#signInModal" value="Sign In">
-        <input class="topButtons" type="button" data-toggle="modal" data-target="#signUpModal" value="Sign Up">
-        <p id="pageTitle" class="logo-title">ScriBBler</p>
-        <p class="middleText">Explore, Imagine, Create</p>
+        <input class="headerButtons" type="button" data-toggle="modal" data-target="#signInModal" value="Sign In">
+        <input class="headerButtons" type="button" data-toggle="modal" data-target="#signUpModal" value="Sign Up">
+        <p class="pageTitle">ScriBBler</p>
+        <p class="titleText">Explore, Imagine, Create</p>
     </div>
     <div class="postButtons">
-        <button class="allPost">All Posts</button>
+        <button class="allPost" onclick="document.location = 'postslist.html'">All Posts</button>
         <button class="createPost" data-toggle="modal" data-target="#createPost">Create Post</button>
     </div>
     <div id="signUpModal" class="modal fade" role="dialog">
@@ -81,7 +81,7 @@
                         </div>
                         <button type="submit" id="SignInbutton" class="btn btn-success">Sign In</button>
                         <div class="text-center">
-                            <label>Not a member? <a href="#signUpModal" data-toggle="modal" onclick="newmodal()">Sing up</a></label>
+                            <label>Not a member? <a href="#signUpModal" data-toggle="modal" data-dismiss="modal">Sing up</a></label>
                         </div>
                     </form>
                 </div>
