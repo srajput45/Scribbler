@@ -35,7 +35,7 @@ var numberOfClicks = 0;
 function postLiked() {
     document.getElementById("likeBlog").innerHTML = "<i class='fa fa-thumbs-up'></i> Liked";
     numberOfClicks += 1;
-    document.getElementById('likeCount').innerHTML = numberOfClicks + " people likes this!";
+    document.getElementById('likeCount').innerHTML = numberOfClicks + " person likes this!";
 }
 
 
