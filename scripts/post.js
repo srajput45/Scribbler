@@ -1,6 +1,6 @@
 var count = 0;
 
-function EditSaveClicked() {
+function editSave() {
     count++;
     var editButton = document.getElementById('editAndSave');
     var heading = document.getElementById('title');
