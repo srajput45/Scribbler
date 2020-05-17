@@ -26,6 +26,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.modal-lg {
+    width: 22.5%;
+}
+
 .pageTitle {
     font-family: 'Montez', cursive;
     font-size: 50px;
@@ -67,7 +71,7 @@ body {
 }
 
 .post:hover {
-    transform: scale(1.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .postContent {
@@ -91,6 +95,10 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+.postTitle p {
+    margin-top: 15px;
 }
 
 P {
