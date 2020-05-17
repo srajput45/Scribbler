@@ -47,11 +47,11 @@ button {
 
 #title {
     text-align: center;
-    font-family: Bodoni MT;
+    font-family: 'Dancing Script', cursive;
 }
 
 .userName {
-    font-family: French Script MT;
+    font-family: 'Montez', cursive;
     font-style: italic;
     font-size: 30px;
 }
@@ -99,4 +99,5 @@ textarea {
 #blogText {
     text-align: justify;
     font-size: small;
+    font-family: 'Roboto Mono', monospace;
 }

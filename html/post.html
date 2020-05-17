@@ -9,27 +9,35 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montez&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montez&family=Roboto+Mono&family=Ubuntu+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/post.css">
 
     <link rel="stylesheet" href="../styles/fontawesome/css/all.css">
 </head>
 
 <body>
+    <!-- Page header -->
     <div class="header">
-        <input class="topButtons" type="button" data-toggle="modal" data-target="#signInModal" value="Sign In">
-        <input class="topButtons" type="button" data-toggle="modal" data-target="#signUpModal" value="Sign Up">
-        <p id="pageTitle" class="logo-title">ScriBBler</p>
-        <p class="middleText">Explore, Imagine, Create</p>
+        <input class="headerButtons" type="button" data-toggle="modal" data-target="#signInModal" value="Sign In">
+        <input class="headerButtons" type="button" data-toggle="modal" data-target="#signUpModal" value="Sign Up">
+        <p class="pageTitle">ScriBBler</p>
+        <p class="titleText">Explore, Imagine, Create</p>
     </div>
+    <!-- Creste post and All post buttons-->
+    <div class="postButtons">
+        <button class="allPost" onclick="document.location = 'postslist.html'">All Posts</button>
+        <button class="createPost" data-toggle="modal" data-target="#createPost">Create Post</button>
+    </div>
+    <!--Sign Up Modal using bootstrap 4 -->
     <div id="signUpModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
+                <!-- modal title -->
                 <div class="modal-header">
                     <h4 class="modal-title">Get Started</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-
                 </div>
+                <!-- Modal body using form-->
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
@@ -55,14 +63,18 @@
 
         </div>
     </div>
+    <!--Sign Up Modal end-->
+    <!--Sign In Modal using bootstrap 4 -->
     <div id="signInModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
+                <!-- modal title -->
                 <div class="modal-header">
                     <h4 class="modal-title">Welcome Back!</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
 
                 </div>
+                <!-- Modal body using form-->
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
@@ -75,24 +87,33 @@
                         </div>
                         <button type="submit" id="SignInbutton" class="btn btn-success">Sign In</button>
                         <div class="text-center">
-                            <label>Not a member? <a href="#signUpModal" data-toggle="modal"data-dismiss="modal">Sing
+                            <label>Not a member? <a href="#signUpModal" data-toggle="modal" data-dismiss="modal">Sing
                                     up</a></label>
                         </div>
                     </form>
                 </div>
             </div>
+
         </div>
     </div>
+    <!-- sign In modal end-->
+
+    <!--Post code-->
     <div class="post">
         <div>
+            <!-- Post title-->
             <h3 id="title" contenteditable="false">
                 Everything you should know about ‘module’ & ‘require’ in Node.js</h3>
         </div>
+
+        <!-- User Name and Edit/Save button -->
         <div class="nameAndEditSave">
             <p class="userName">Srishti Gupta
             </p>
             <button id="editAndSave" onclick="editSave()">Edit <i class="fa fa-edit"></i></button><br>
         </div>
+
+        <!-- Post text div -->
         <div>
             <p id="blogText" contenteditable="false">
                 Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module named xyz. Let’s
@@ -117,11 +138,13 @@
                 to be exported. Let’s discuss these methods one by one.
             </p>
         </div>
+        <!-- footer part having like button, like count, comment button and comment box -->
         <div>
             <button id="likeBlog" onclick="postLiked()"><i class='fa fa-thumbs-up'></i>Like</i></button><br>
             <span id="likeCount">Be the first one to like this!</span>
         </div>
         <br>
+        <!-- comment box and button -->
         <textarea rows="3" id="commentTextBox" placeholder="Leave a comment..."></textarea><br>
         <button id="addComment" onclick="addComments(commentTextBox)">Comment</button><br>
         <h5>All Comments</h5>
